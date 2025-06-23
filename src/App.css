@@ -1,38 +1,192 @@
-.App {
-  text-align: center;
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+}
+
+/* Board List Styles */
+.board-list {
+  width: 250px;
+  background: #f0f0f0;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+}
+
+.board-list h2 {
+  margin-top: 0;
+}
+
+.board-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.board-list li {
+  padding: 10px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  border-radius: 4px;
+}
+
+.board-list li:hover {
+  background: #ddd;
+}
+
+.board-list li.active {
+  background: #0079bf;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.board-list form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board-list input {
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.board-list button {
+  padding: 8px;
+  background: #0079bf;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Board Styles */
+.board {
+  flex: 1;
+  padding: 20px;
+}
+
+.board-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.board-header button {
+  padding: 8px 16px;
+  background: #0079bf;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.columns {
+  display: flex;
+  gap: 20px;
+}
+
+.column {
+  flex: 1;
+  background: #f0f0f0;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.column h3 {
+  margin-top: 0;
+}
+
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Task Styles */
+.task {
+  background: white;
+  padding: 15px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.priority {
+  padding: 2px 8px;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+}
+
+.task-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.task-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+}
+
+.task-actions button:hover {
+  color: #0079bf;
+}
+
+/* Modal Styles */
+.ReactModal__Overlay {
+  background: rgba(0,0,0,0.5) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ReactModal__Content {
+  position: relative !important;
+  inset: auto !important;
+  width: 400px;
+  padding: 20px !important;
+  border-radius: 4px !important;
+}
+
+.ReactModal__Content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.ReactModal__Content label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.ReactModal__Content input,
+.ReactModal__Content textarea,
+.ReactModal__Content select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.ReactModel__context textarea {
+  height: 80px;
+}
+
+.ReactModal__Content button {
+  padding: 8px 16px;
+  margin-right: 10px;
+  cursor: pointer;
 }
